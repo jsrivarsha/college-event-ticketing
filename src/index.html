@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Event Ticketing & RSVP</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        label { font-weight: bold; margin-top: 10px; display: block; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; background-color: #007bff; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>College Event Registration</h1>
+    <form action="bookTicket" method="POST">
+        <label for="eventId">Select Event:</label>
+        <select name="eventId" id="eventId" required>
+            <option value="1">Annual Tech Fest 2026 (Main Auditorium)</option>
+            <option value="2">Cultural Night (Open Air Theater)</option>
+        </select>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required>
+
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" placeholder="e.g. 21BCE0101" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="e.g. rahul@example.com" required>
+
+        <button type="submit">Reserve Ticket</button>
+    </form>
+</div>
+
+</body>
+</html>
